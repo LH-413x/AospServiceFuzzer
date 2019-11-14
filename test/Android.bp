@@ -1,0 +1,17 @@
+cc_binary{
+	name: "fuzz-test",
+	cflags: [
+		"-Wno-error",
+	],
+	srcs:[
+		"main.cpp"
+	],
+	static_libs: [
+		"Reporter",
+		"cov_rpc",
+	],
+	sanitize: {
+		coverage: true,
+		address: true,
+	}
+}

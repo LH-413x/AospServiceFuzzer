@@ -1,0 +1,15 @@
+cc_binary{
+	name: "lh-tracer",
+	include_dirs: [
+		"aosp_fuzzer/rpc",
+	],
+	cflags: [
+		"-Wno-error",
+	],
+	srcs:[
+		"tracer.cpp"
+	],
+	static_libs: [
+		"cov_rpc",
+	],
+}

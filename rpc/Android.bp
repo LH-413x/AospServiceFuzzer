@@ -1,0 +1,10 @@
+cc_library_static {
+	name: "cov_rpc",
+	vendor_available: true,
+	cflags: [
+	],
+	srcs: [
+		"client.cpp",
+		"service.cpp"
+	],
+}

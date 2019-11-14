@@ -1,0 +1,22 @@
+cc_library_static {
+	name: "Reporter",
+	vendor_available: true,
+	cflags: [
+		"-g",
+		"-D_LIB",
+		"-O0",
+		"-Wno-error",
+	],
+	include_dirs: [
+		"aosp_fuzzer/rpc",
+		"aosp_fuzzer/reporter/include"
+	],
+	static_libs:[
+		"cov_rpc",
+	],
+	srcs: [
+		"LocalTracePC.cpp",
+		"Reporter.cpp",
+		"ReporterMain.cpp"
+	],
+}
